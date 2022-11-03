@@ -8,6 +8,6 @@ read(fileName);
 function read(file) {
   if (!file) return
   let filePath = path.join(__dirname, `${file}`);
-  let stream = fs.createReadStream(filePath, 'utf-8');
+  let stream = fs.createReadStream(filePath, { encoding: 'utf-8' });
   stream.on('data', (chunk) => stdout.write(chunk));
 }

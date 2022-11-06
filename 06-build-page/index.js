@@ -41,7 +41,7 @@ async function pickLayout(item) {
 
 
 async function createHtml(components) {
-  let data;
+  let data = ``;
   let stream = fs.createReadStream(path.join(__dirname, 'template.html'), {encoding: 'utf-8'});
 
   stream.on('data', chunk => {
